@@ -1,0 +1,32 @@
+<%= form_with(model: anniv) do |form| %>
+  <% if anniv.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(anniv.errors.count, "error") %> prohibited this anniv from being saved:</h2>
+
+      <ul>
+        <% anniv.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :birthdate %>
+    <%= form.date_select :birthdate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :active %>
+    <%= form.check_box :active %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

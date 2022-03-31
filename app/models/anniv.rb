@@ -1,0 +1,2 @@
+class Anniv < ApplicationRecord
+end

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @anniv.name %>
+</p>
+
+<p>
+  <strong>Birthdate:</strong>
+  <%= @anniv.birthdate %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @anniv.active %>
+</p>
+
+<%= link_to 'Edit', edit_anniv_path(@anniv) %> |
+<%= link_to 'Back', annivs_path %>

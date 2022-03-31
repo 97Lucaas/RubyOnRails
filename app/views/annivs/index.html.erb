@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Annivs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Birthdate</th>
+      <th>Active</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @annivs.each do |anniv| %>
+      <tr>
+        <td><%= anniv.name %></td>
+        <td><%= anniv.birthdate %></td>
+        <td><%= anniv.active %></td>
+        <td><%= link_to 'Show', anniv %></td>
+        <td><%= link_to 'Edit', edit_anniv_path(anniv) %></td>
+        <td><%= link_to 'Destroy', anniv, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Anniv', new_anniv_path %>
