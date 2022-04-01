@@ -1,19 +1,35 @@
-<p id="notice"><%= notice %></p>
+
+
+
+<div class="banner">
+  <h1>Anniversaires</h1>
+</div>
+
+
+ <div class="container">
 
 <p>
-  <strong>Name:</strong>
+  <strong>Prenom :</strong>
   <%= @anniv.name %>
 </p>
 
 <p>
-  <strong>Birthdate:</strong>
-  <%= @anniv.birthdate %>
+  <strong>Date de naissance :</strong>
+  <%= I18n.l(@anniv.birthdate, format: :long, locale: :'fr') %>
 </p>
 
 <p>
-  <strong>Active:</strong>
+  <strong>Actif :</strong>
   <%= @anniv.active %>
 </p>
 
-<%= link_to 'Edit', edit_anniv_path(@anniv) %> |
-<%= link_to 'Back', annivs_path %>
+<br>
+
+<p class="alerte"><%= notice %></p>
+
+<br>
+
+<div class="bouton"><%= link_to 'Editer', edit_anniv_path(@anniv) %></div> |
+<div class="bouton"><%= link_to 'Retour', annivs_path %></div>
+
+</div>

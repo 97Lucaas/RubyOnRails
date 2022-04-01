@@ -11,22 +11,32 @@
     </div>
   <% end %>
 
+  <div class="container">
+
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :Prénom %>
     <%= form.text_field :name %>
   </div>
 
+  <br/>
+
   <div class="field">
-    <%= form.label :birthdate %>
+    <%= form.label :Date_de_naissance %>
     <%= form.date_field :birthdate, as: :date, html5: true %>
   </div>
 
+  <br/>
+
   <div class="field">
-    <%= form.label :active %>
+    <%= form.label :Actif %>
     <%= form.check_box :active %>
   </div>
 
+  <br/>
+
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Appliquer" %>
+  </div>
+
   </div>
 <% end %>

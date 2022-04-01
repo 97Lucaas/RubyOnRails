@@ -1,6 +1,13 @@
-<h1>Editing Anniv</h1>
+
+<div class="banner">
+  <h1>Editer un anniversaire</h1>
+</div>
+
+
+<div class="container">
 
 <%= render 'form', anniv: @anniv %>
 
-<%= link_to 'Show', @anniv %> |
-<%= link_to 'Back', annivs_path %>
+<div class="bouton"><%= link_to 'Afficher', @anniv %></div> |
+<div class="bouton"><%= link_to 'Retour', annivs_path %></div>
+ </div>

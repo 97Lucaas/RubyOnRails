@@ -25,7 +25,7 @@ class AnnivsController < ApplicationController
 
     respond_to do |format|
       if @anniv.save
-        format.html { redirect_to anniv_url(@anniv), notice: "Anniv was successfully created." }
+        format.html { redirect_to anniv_url(@anniv), notice: "L'anniversaire à bien été créé !." }
         format.json { render :show, status: :created, location: @anniv }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class AnnivsController < ApplicationController
   def update
     respond_to do |format|
       if @anniv.update(anniv_params)
-        format.html { redirect_to anniv_url(@anniv), notice: "Anniv was successfully updated." }
+        format.html { redirect_to anniv_url(@anniv), notice: "L'anniversaire à bien été édité." }
         format.json { render :show, status: :ok, location: @anniv }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class AnnivsController < ApplicationController
     @anniv.destroy
 
     respond_to do |format|
-      format.html { redirect_to annivs_url, notice: "Anniv was successfully destroyed." }
+      format.html { redirect_to annivs_url, notice: "L'anniversaire à bien été supprimé." }
       format.json { head :no_content }
     end
   end
